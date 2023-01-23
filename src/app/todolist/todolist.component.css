@@ -1,0 +1,109 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Borel&display=swap");
+.body {
+  /* background-image: url(../assets/pexels-polina-kovaleva-5717422.jpg); */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Borel", cursive;
+  background: linear-gradient(-45deg, #8ec5fc 0%, #e0c3fc, #23a6d5, #23d5ab);
+  animation: gradient 15s ease infinite;
+}
+
+.navbar {
+  color: #fff;
+}
+
+form {
+  width: 45vw;
+  min-height: 80vh;
+  margin: auto;
+  position: relative;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+  padding: 1em;
+  margin-left: 2rem;
+  margin-right: 3.3rem;
+  margin-top: 1rem;
+  color: #000000;
+  list-style: none;
+  font-size: large;
+}
+
+i {
+  float: right;
+  color: #343434;
+  cursor: pointer;
+}
+
+form .btn i {
+  font-size: 2em;
+  color: white;
+}
+
+.form-control {
+  height: 3em;
+  border: 0.5px solid rgba(0, 0, 0, 0.244);
+  width: 18rem;
+}
+
+.btn {
+  background: rgba(0, 0, 0, 0.874);
+  backdrop-filter: blur(1.2px);
+  -webkit-backdrop-filter: blur(1.2px);
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  padding: 1em 23px;
+  color: #fff;
+  position: absolute;
+  right: 30px;
+  top: -12px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #000000;
+}
+
+.task {
+  margin-right: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-control:focus,
+.btn:focus {
+  outline-color: 0;
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

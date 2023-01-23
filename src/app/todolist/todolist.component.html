@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="body"> 
+
+<!-- nav bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../../assets/icons8-planner-50.png" width="50" height="50" routerLink ="/home">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#" routerLink="/calender">
+            Calender
+          </a>
+          <a class="nav-link" href="#">Features</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- form module -->
+  <form #todoForm= "ngForm" (ngSubmit)="todoSubmit(todoForm.value)"> 
+    <div class="form-group">  
+      <h1 class="text-center text-primary mb-3">Todo List</h1>   
+      <div class="input-group mb-3">
+        <div class="task"><input type="text" class="form-control" placeholder="Enter your tasks" name="todo" [(ngModel)]="todoValue"></div>
+        <span> <button class="btn btn-clear" type="button" (click)="addTodo()"><i class="material-icons">add</i></button></span>
+      </div>
+      
+      <ul class="list-instyled">
+        <li *ngFor="let todoItem of todoArray">
+          <span [ngClass]="{ 'text-decoration-line-through': todoItem.completed }">
+            <i class="material-icons" [(ngModel)]="todoItem.completed" (click)="onTaskCompleted(todoItem)">check</i>
+            {{ todoItem.todo }}
+          </span>
+          <i class="material-icons" (click)="deleteItem(todoItem)">delete</i>
+        </li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+
+
+
+
